@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    android:background="@drawable/bg1" >
+
+   	<ImageView 
+        android:contentDescription="@+id/img_logo"
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/harry"
+         />
+
+   	<EditText
+   	    android:id="@+id/edit_email"
+   	    android:layout_width="match_parent"
+   	    android:layout_height="wrap_content"
+   	    android:hint="@string/edit_email"
+   	    android:ems="10"
+   	    android:inputType="textEmailAddress" >
+
+   	    <requestFocus />
+   	</EditText>
+
+   	<EditText
+   	    android:id="@+id/edit_pass"
+   	    android:hint="@string/edit_wachtwoord"
+   	    android:layout_width="match_parent"
+   	    android:layout_height="wrap_content"
+   	    android:ems="10"
+   	    android:inputType="textPassword" />
+   	
+   	<EditText
+   	    android:id="@+id/edit_pass_herhaal"
+   	    android:hint="@string/edit_wachtwoord_herhaal"
+   	    android:layout_width="match_parent"
+   	    android:layout_height="wrap_content"
+   	    android:ems="10"
+   	    android:inputType="textPassword" />
+   	
+   	<Button
+   	    android:layout_width="240dp"
+   	    android:layout_height="wrap_content"
+   	    android:text="@string/button_bevestig"
+   	    android:id="@+id/btn_bevestig"
+   	    android:textStyle="italic" 
+   	    android:onClick="onClick"
+   	    />
+   	
+   	<Button
+   	    android:layout_width="240dp"
+   	    android:layout_height="wrap_content"
+   	    android:text="@string/button_exit"
+   	    android:id="@+id/btn_exit"
+   	    android:textStyle="italic" 
+   	    android:onClick="onClick"
+   	    />
+   	
+   	<ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hello" />
+
+</LinearLayout>
