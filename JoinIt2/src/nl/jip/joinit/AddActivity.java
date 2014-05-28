@@ -19,6 +19,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -123,12 +124,14 @@ public class AddActivity extends Activity implements OnClickListener {
 		    		HttpResponse response = httpclient.execute(httppost);
 		    		String responseBody = EntityUtils.toString(response.getEntity());
 		    		
+		    		if(responseBody.equalsIgnoreCase("Activiteit added")){
+		    			Intent intent = new Intent(AddActivity.this, Home.class);
+			    		startActivity(intent);
+		    		} if(responseBody.equalsIgnoreCase("Deze activiteit is al toegevoegd!")){
+		    			result = "De activiteit is eerder al toegevoegd";
+		    		}
 		    		TextView text = (TextView) findViewById(R.id.TextView1);
-		    		text.setText(responseBody);
-	                
-		    		//Intent intent = new Intent(AddActivity.this, Home.class);
-		    		//startActivity(intent);
-		    	this.progressDialog.dismiss();
+		    		text.setText(result);
 		    } catch (ClientProtocolException e) {
 		        // TODO Auto-generated catch block
 		    	e.printStackTrace();
@@ -138,6 +141,7 @@ public class AddActivity extends Activity implements OnClickListener {
 		    } catch (Exception e) {
 		    	e.printStackTrace();
 		    }
+        this.progressDialog.dismiss();
 		} 
 		
 				
