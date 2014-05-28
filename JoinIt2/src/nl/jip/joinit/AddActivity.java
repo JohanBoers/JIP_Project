@@ -13,12 +13,12 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -102,6 +102,7 @@ public class AddActivity extends Activity implements OnClickListener {
 		    
 		    try {
 		        // Add your data
+		    	
 		    		String Titel = et_titel.getText().toString();
 		    		String Omschrijving = et_omschrijving.getText().toString();
 		    		String Postcode = et_postcode.getText().toString();
@@ -120,9 +121,13 @@ public class AddActivity extends Activity implements OnClickListener {
 		    		
 		    		// Execute HTTP Post Request
 		    		HttpResponse response = httpclient.execute(httppost);
+		    		String responseBody = EntityUtils.toString(response.getEntity());
 		    		
-		    		Intent intent = new Intent(AddActivity.this, Home.class);
-		    		startActivity(intent);
+		    		TextView text = (TextView) findViewById(R.id.TextView1);
+		    		text.setText(responseBody);
+	                
+		    		//Intent intent = new Intent(AddActivity.this, Home.class);
+		    		//startActivity(intent);
 		    	this.progressDialog.dismiss();
 		    } catch (ClientProtocolException e) {
 		        // TODO Auto-generated catch block

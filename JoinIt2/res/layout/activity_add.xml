@@ -147,6 +147,11 @@
                 android:id="@+id/btn_add"
                 style="@style/btnStyleSandrift" 
                 />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TextView1"
+                />
             
             </LinearLayout>
     </ScrollView>
