@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">JoinIt</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="string1">Registreren met email</string>
+    <string name="string2">Registreren met Facebook</string>
+    <string name="string3">Aanmelden</string>
+
+</resources>

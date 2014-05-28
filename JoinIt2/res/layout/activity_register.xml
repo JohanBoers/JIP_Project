@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    android:background="@drawable/harry2" >
+
+   	<ImageView 
+        android:contentDescription="@+id/img_logo"
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo2"
+         />
+
+   	<EditText
+   	    android:id="@+id/et_email"
+   	    android:layout_width="match_parent"
+   	    android:layout_height="wrap_content"
+   	    android:hint="@string/edit_email"
+   	    android:ems="10"
+   	    android:inputType="textEmailAddress"
+   	    android:alpha="0.8"
+   	    android:background="#FFF"
+   	    android:textSize="17sp"
+   	    android:layout_marginBottom="4sp"
+   	    android:gravity="center" >
+
+   	    <requestFocus />
+   	</EditText>
+
+   	<EditText
+   	    android:id="@+id/et_wachtwoord"
+   	    android:hint="@string/edit_wachtwoord"
+   	    android:layout_width="match_parent"
+   	    android:layout_height="wrap_content"
+   	    android:ems="10"
+   	    android:inputType="textPassword"
+   	    android:alpha="0.8"
+   	    android:background="#FFF"
+   	    android:textSize="17sp"
+   	    android:layout_marginBottom="4sp"
+   	    android:gravity="center" />
+   	
+   	<EditText
+   	    android:id="@+id/et_wachtwoord2"
+   	    android:hint="@string/edit_wachtwoord_herhaal"
+   	    android:layout_width="match_parent"
+   	    android:layout_height="wrap_content"
+   	    android:ems="10"
+   	    android:inputType="textPassword"
+   	    android:alpha="0.8"
+   	    android:background="#FFF"
+   	    android:textSize="17sp"
+   	    android:layout_marginBottom="4sp"
+   	    android:gravity="center" />
+   	
+   	<Button
+   	    android:layout_width="240dp"
+   	    android:layout_height="wrap_content"
+   	    android:text="@string/button_bevestig"
+   	    android:id="@+id/add"
+   	    android:textStyle="italic" 
+   	    android:onClick="onClick"
+   	    style="@style/btnStyleSandrift"
+   	    />
+   	
+   	<Button
+   	    android:layout_width="240dp"
+   	    android:layout_height="wrap_content"
+   	    android:text="@string/button_exit"
+   	    android:id="@+id/exit"
+   	    android:textStyle="italic" 
+   	    android:onClick="onClick"
+   	    style="@style/btnStyleSandrift"
+   	    />
+   	
+   	
+    
+    <TextView
+         android:id="@+id/tv_register"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:scrollbars="vertical"
+         android:text="" />
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/harry2"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="50" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="50"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/Button1"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Button2"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="35dp"
+                android:text="@string/string1"
+                style="@style/btnStyleSandrift"  />
+
+            <Button
+                android:id="@+id/Button2"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/Button1"
+                android:layout_alignLeft="@+id/Button3"
+                android:layout_marginBottom="9dp"
+                android:text="@string/string2"
+                style="@style/btnStyleSandrift"  />
+
+            <Button
+                android:id="@+id/Button3"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/Button2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="11dp"
+                android:text="@string/string3"
+                style="@style/btnStyleSandrift"  />
+
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@+id/img_logo"
+                android:src="@drawable/logo2" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
