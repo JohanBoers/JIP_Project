@@ -129,7 +129,7 @@ public class Login extends Activity implements OnClickListener {
 			try
 			{
 				JSONArray Jarray = new JSONArray(result);
-				String db_detail = "";
+				String db_detail = " ";
 				for(int i=0; i<Jarray.length(); i++)
 				{
 					JSONObject Jasonobject = Jarray.getJSONObject(i);
@@ -141,14 +141,14 @@ public class Login extends Activity implements OnClickListener {
 						String wachtwoord2 = md5(wachtwoord3);
 						if(wachtwoord2.equalsIgnoreCase(wachtwoord)){
 							progressDialog.setMessage("Preparing data.......");
-							Intent intent = new Intent(Login.this, AddActivity.class);
+							Intent intent = new Intent(Login.this, Home.class);
 							startActivity(intent);
 							progressDialog.dismiss();
 							finish();
 						} if(!wachtwoord2.equalsIgnoreCase(wachtwoord)) {
 							db_detail = "Uw wachtwoord komt niet overeen! \n";
 						}
-					} if (!md5(et.getText().toString()).equalsIgnoreCase(name)){
+					} else {
 						db_detail = "Geen e-mail adres gevonden, maak nu een account aan en 'share the fun'!";
 					}
 						

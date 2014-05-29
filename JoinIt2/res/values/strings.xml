@@ -21,6 +21,6 @@
     <string name="plaats">Plaats</string>
     <string name="huisnr">Huisnummer</string>
     <string name="datum">Datum</string>
-    <string name="title_activity_home">Home</string>
+    <string name="Nieuwsoverzicht">Nieuwsoverzicht</string>
 
 </resources>
