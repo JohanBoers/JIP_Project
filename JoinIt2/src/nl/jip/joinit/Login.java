@@ -87,7 +87,7 @@ public class Login extends Activity implements OnClickListener {
 		
 		protected Void doInBackground(String... params)
 		{
-			String url = "http://10.0.1.21:8888/app/app.php";
+			String url = "http://whi.wha.la/project4/app.php";
 			
 			HttpClient httpClient = new DefaultHttpClient();
 			HttpPost httpPost = new HttpPost(url);

@@ -96,7 +96,7 @@ public class Register extends Activity implements OnClickListener {
 		public void onPostExecute() {
 		    // Create a new HttpClient and Post Header
 		    HttpClient httpclient = new DefaultHttpClient();
-		    HttpPost httppost = new HttpPost("http://10.0.1.21:8888/app/items.php");
+		    HttpPost httppost = new HttpPost("http://whi.wha.la/project4/items.php");
 
 		    
 		    
