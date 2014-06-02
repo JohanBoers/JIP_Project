@@ -8,7 +8,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class Home extends Activity implements OnClickListener {
-	Button add_activity;
+	Button add_activity, nieuwsoverzicht;
 	Intent intent;
 
 	@Override
@@ -17,10 +17,10 @@ public class Home extends Activity implements OnClickListener {
 		setContentView(R.layout.activity_home);
 		
 		add_activity = (Button) findViewById(R.id.btn_add_activity_home);
-		
+		nieuwsoverzicht = (Button) findViewById(R.id.btn_nieuws);
 		
 		add_activity.setOnClickListener(this);
-
+		nieuwsoverzicht.setOnClickListener(this);
 	}
 	
 	public void onClick(View v) {
@@ -30,9 +30,12 @@ public class Home extends Activity implements OnClickListener {
 				intent = new Intent(this, AddActivity.class);
 				startActivity(intent);
 			break;
+			case R.id.btn_nieuws:
+				intent = new Intent(this, Nieuwsoverzicht.class);
+				startActivity(intent);
+			break;
 			default:
 			throw new RuntimeException("Unknow button ID");
 		}
 	}
-
 }

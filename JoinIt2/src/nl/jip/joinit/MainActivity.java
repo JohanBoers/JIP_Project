@@ -4,7 +4,6 @@ import nl.jip.joinit.Login.task;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -17,43 +16,49 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+		
 		knop = (Button) findViewById(R.id.Button3);
 		knop2 = (Button) findViewById(R.id.Button2);
-
+		
 		knop.setOnClickListener(this);
 		knop2.setOnClickListener(this);
 	}
-
+	
 	public void onClick(View v) {
 		Intent intent = null;
-		// Toast.makeText(v.getContext(), "rodekool",
-		// Toast.LENGTH_SHORT).show();
-		switch (v.getId()) {
+	//	Toast.makeText(v.getContext(), "rodekool", Toast.LENGTH_SHORT).show();
+		switch(v.getId())
+		{
 		case R.id.Button3:
 			intent = new Intent(this, Login.class);
 			startActivity(intent);
-			break;
+		break;
 		case R.id.Button2:
 			intent = new Intent(this, Register.class);
 			startActivity(intent);
-			break;
+		break;
 		default:
-			throw new RuntimeException("Unknow button ID");
+		throw new RuntimeException("Unknow button ID");
 		}
 	}
 
-	@Override
+	/*@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// TODO Auto-generated method stub
-		super.onCreateOptionsMenu(menu);
-		menu.add("Info")
-			.setIcon(R.drawable.ic_menu_info)
-			.setIntent(new Intent(this, Help.class));
-		menu.add("Opties")
-			.setIcon(R.drawable.ic_menu_opties)
-			.setIntent(new Intent(this, Options.class));
+
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}*/
 }
