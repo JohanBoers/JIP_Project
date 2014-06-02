@@ -6,6 +6,7 @@
     <string name="action_settings">Settings</string>
     <string name="btn_register">Registreren met email</string>
     <string name="btn_help">Help</string>
+    <string name="btn_options">Opties</string>
     <string name="btn_login">Aanmelden</string>
     <string name="title_activity_login">Login</string>
     <string name="button_bevestig_login">Log in</string>
@@ -22,5 +23,6 @@
     <string name="huisnr">Huisnummer</string>
     <string name="datum">Datum</string>
     <string name="Nieuwsoverzicht">Nieuwsoverzicht</string>
+    <string name="Opties">Opties</string>
 
 </resources>

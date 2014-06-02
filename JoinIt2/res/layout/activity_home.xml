@@ -2,39 +2,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="${packageName}.${activityClass}"
+    android:gravity="center|top"
     android:orientation="vertical"
-    android:gravity="center|top" >
+    tools:context="${packageName}.${activityClass}" >
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center|top">
-        <LinearLayout 
+        android:gravity="center|top" >
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center|top">
+            android:gravity="center|top"
+            android:orientation="vertical" >
+
             <Button
+                android:id="@+id/btn_nieuws"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/gradient_red"
                 android:text="@string/Nieuwsoverzicht"
                 android:textColor="#FFF"
-                android:textSize="23sp"
-                android:id="@+id/btn_nieuws"
-                android:background="@drawable/gradient_red"
-                />
+                android:textSize="23sp" />
+
             <Button
+                android:id="@+id/btn_add_activity_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/gradient_orange"
                 android:text="@string/add"
                 android:textColor="#FFF"
-                android:textSize="23sp"
-                android:id="@+id/btn_add_activity_home"
+                android:textSize="23sp" />
+
+            <Button
+                android:id="@+id/btn_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@drawable/gradient_orange"
-                />
+                android:text="@string/Opties"
+                android:textColor="#FFF"
+                android:textSize="23sp" />
         </LinearLayout>
     </ScrollView>
-    
 
 </LinearLayout>
