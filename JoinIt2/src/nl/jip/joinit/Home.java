@@ -9,7 +9,6 @@ import android.widget.Button;
 
 public class Home extends Activity implements OnClickListener {
 	Button add_activity;
-	Button btn_option;
 	Intent intent;
 
 	@Override
@@ -18,10 +17,10 @@ public class Home extends Activity implements OnClickListener {
 		setContentView(R.layout.activity_home);
 		
 		add_activity = (Button) findViewById(R.id.btn_add_activity_home);
-		btn_option = (Button) findViewById(R.id.btn_options);
+		
 		
 		add_activity.setOnClickListener(this);
-		btn_option.setOnClickListener(this);
+
 	}
 	
 	public void onClick(View v) {
@@ -31,12 +30,9 @@ public class Home extends Activity implements OnClickListener {
 				intent = new Intent(this, AddActivity.class);
 				startActivity(intent);
 			break;
-			case R.id.btn_options:
-				intent = new Intent(this, Options.class);
-				startActivity(intent);
-			break;
 			default:
 			throw new RuntimeException("Unknow button ID");
 		}
 	}
+
 }

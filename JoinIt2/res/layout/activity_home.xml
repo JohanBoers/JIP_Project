@@ -35,14 +35,6 @@
                 android:textColor="#FFF"
                 android:textSize="23sp" />
 
-            <Button
-                android:id="@+id/btn_options"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/gradient_orange"
-                android:text="@string/Opties"
-                android:textColor="#FFF"
-                android:textSize="23sp" />
         </LinearLayout>
     </ScrollView>
 

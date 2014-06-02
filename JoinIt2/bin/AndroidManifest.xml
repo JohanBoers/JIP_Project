@@ -48,6 +48,9 @@
             android:configChanges="orientation"
             android:screenOrientation="portrait" >
         </activity>
+        
+        <activity android:name=".Help"/>
+        <activity android:name=".Options"/>
     </application>
 
 </manifest>
