@@ -23,6 +23,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -140,10 +141,12 @@ public class Nieuwsoverzicht extends Activity implements OnClickListener {
 					TextView db_detail1 = new TextView(Nieuwsoverzicht.this);
 					LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 					db_detail.setTextSize(25);
+					db_detail.setTextColor(Color.BLACK);
 					db_detail.setTypeface(null, Typeface.BOLD);
 					db_detail.setText(Jasonobject.getString("Titel"));
 					ll.addView(db_detail);
 					db_detail1.setText(Jasonobject.getString("Omschrijving")+ "\n\n");
+					db_detail1.setTextColor(Color.BLACK);
 					ll.addView(db_detail1);
 					nieuws.addView(ll);
 				}
