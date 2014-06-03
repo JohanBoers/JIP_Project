@@ -83,13 +83,16 @@ public class Nieuwsoverzicht extends Activity implements OnClickListener {
 		
 		protected Void doInBackground(String... params)
 		{
-			String url = "http://145.24.243.123:8888/app/activitys.php";
+			String url = "http://10.0.1.21:8888/app/activitys.php";
 			
 			HttpClient httpClient = new DefaultHttpClient();
 			HttpPost httpPost = new HttpPost(url);
+			
+			Bundle extras = getIntent().getExtras();
+			String newString = extras.getString("UserId");
 				
 				ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
-				nameValuePairs.add(new BasicNameValuePair("Titel", ""));
+				nameValuePairs.add(new BasicNameValuePair("UserId", newString));
 			InputStream is = null;
 			try
 			{

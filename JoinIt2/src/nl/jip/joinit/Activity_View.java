@@ -65,7 +65,7 @@ public class Activity_View extends Activity {
 		
 		protected Void doInBackground(String... params)
 		{
-			String url = "http://145.24.243.123:8888/app/activity.php";
+			String url = "http://10.0.1.21:8888/app/activity.php";
 			
 			HttpClient httpClient = new DefaultHttpClient();
 			HttpPost httpPost = new HttpPost(url);

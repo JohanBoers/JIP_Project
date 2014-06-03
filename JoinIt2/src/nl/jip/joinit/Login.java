@@ -140,11 +140,12 @@ public class Login extends Activity implements OnClickListener {
 						String wachtwoord3 = et2.getText().toString();
 						String wachtwoord2 = md5(wachtwoord3);
 						if(wachtwoord2.equalsIgnoreCase(wachtwoord)){
+							String UserId = Jasonobject.getString("Id");
 							progressDialog.setMessage("Preparing data.......");
 							Intent intent = new Intent(Login.this, Home.class);
+							intent.putExtra("UserId", UserId);
 							startActivity(intent);
 							progressDialog.dismiss();
-							finish();
 						} if(!wachtwoord2.equalsIgnoreCase(wachtwoord)) {
 							db_detail = "Uw wachtwoord komt niet overeen! \n";
 						}

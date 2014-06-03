@@ -21,11 +21,9 @@ public final class R {
         public static final int harry2=0x7f020007;
         public static final int harry3=0x7f020008;
         public static final int ic_launcher=0x7f020009;
-        public static final int ic_menu_info=0x7f02000a;
-        public static final int ic_menu_opties=0x7f02000b;
-        public static final int logo1=0x7f02000c;
-        public static final int logo2=0x7f02000d;
-        public static final int storeicon=0x7f02000e;
+        public static final int logo1=0x7f02000a;
+        public static final int logo2=0x7f02000b;
+        public static final int storeicon=0x7f02000c;
     }
     public static final class id {
         public static final int Button1=0x7f06001b;
@@ -68,13 +66,11 @@ public final class R {
     public static final class layout {
         public static final int activity_activity__view=0x7f030000;
         public static final int activity_add=0x7f030001;
-        public static final int activity_help=0x7f030002;
-        public static final int activity_home=0x7f030003;
-        public static final int activity_login=0x7f030004;
-        public static final int activity_main=0x7f030005;
-        public static final int activity_nieuwsoverzicht=0x7f030006;
-        public static final int activity_options=0x7f030007;
-        public static final int activity_register=0x7f030008;
+        public static final int activity_home=0x7f030002;
+        public static final int activity_login=0x7f030003;
+        public static final int activity_main=0x7f030004;
+        public static final int activity_nieuwsoverzicht=0x7f030005;
+        public static final int activity_register=0x7f030006;
     }
     public static final class string {
         public static final int Nieuwsoverzicht=0x7f040014;

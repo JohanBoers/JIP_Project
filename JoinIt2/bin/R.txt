@@ -244,6 +244,7 @@ int drawable harry3 0x7f02005f
 int drawable ic_launcher 0x7f020060
 int drawable logo1 0x7f020061
 int drawable logo2 0x7f020062
+int drawable storeicon 0x7f020063
 int id Button1 0x7f050057
 int id Button2 0x7f050058
 int id Button3 0x7f050059

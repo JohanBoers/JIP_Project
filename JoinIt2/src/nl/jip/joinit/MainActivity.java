@@ -46,12 +46,12 @@ public class MainActivity extends Activity implements OnClickListener {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// TODO Auto-generated method stub
 		super.onCreateOptionsMenu(menu);
-		menu.add("Info")
-			.setIcon(R.drawable.ic_menu_info)
-			.setIntent(new Intent(this, Help.class));
-		menu.add("Opties")
-			.setIcon(R.drawable.ic_menu_opties)
-			.setIntent(new Intent(this, Options.class));
+		menu.add("Info");
+			//.setIcon(R.drawable.ic_menu_info)
+			//.setIntent(new Intent(this, Help.class));
+		menu.add("Opties");
+			//.setIcon(R.drawable.ic_menu_opties)
+			//.setIntent(new Intent(this, Options.class));
 		return true;
 	}
 }
