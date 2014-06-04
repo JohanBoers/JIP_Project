@@ -97,9 +97,7 @@ public class AddActivity extends Activity implements OnClickListener {
 		public void onPostExecute() {
 		    // Create a new HttpClient and Post Header
 		    HttpClient httpclient = new DefaultHttpClient();
-		    HttpPost httppost = new HttpPost("http://10.0.1.21:8888/app/add_activity.php");
-		    HttpClient httpclient2 = new DefaultHttpClient();
-		    HttpPost httppost2 = new HttpPost("http://10.0.1.21:8888/app/koppelid.php");
+		    HttpPost httppost = new HttpPost("http://whi.wha.la/project4/add_activity.php");
 
 		    
 		    
@@ -126,20 +124,9 @@ public class AddActivity extends Activity implements OnClickListener {
 		    		HttpResponse response = httpclient.execute(httppost);
 		    		String responseBody = EntityUtils.toString(response.getEntity());
 		    		
-		    		if(!responseBody.equalsIgnoreCase("Deze activiteit is al toegevoegd!")){
-		    			Bundle extras = getIntent().getExtras();
-		    			String UserId = extras.getString("UserId");
-		    			List<NameValuePair> nameValuePairs2 = new ArrayList<NameValuePair>(2);
-			    		nameValuePairs2.add(new BasicNameValuePair("ActivityId", responseBody));
-			    		nameValuePairs2.add(new BasicNameValuePair("UserId", UserId));
-			    		httppost2.setEntity(new UrlEncodedFormEntity(nameValuePairs2));
-			    		HttpResponse response2 = httpclient.execute(httppost2);
-			    		String responseBody2 = EntityUtils.toString(response2.getEntity());
-		    			if(responseBody2.equalsIgnoreCase("Activiteit added")){
-		    				Intent intent = new Intent(AddActivity.this, Home.class);
-		    				intent.putExtra("UserId", UserId);
-				    		startActivity(intent);
-		    			}
+		    		if(responseBody.equalsIgnoreCase("Activiteit added")){
+		    			Intent intent = new Intent(AddActivity.this, Home.class);
+			    		startActivity(intent);
 		    		} if(responseBody.equalsIgnoreCase("Deze activiteit is al toegevoegd!")){
 		    			result = "De activiteit is eerder al toegevoegd";
 		    		}

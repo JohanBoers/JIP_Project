@@ -4,8 +4,7 @@
     android:layout_height="match_parent"
     tools:context="${packageName}.${activityClass}"
     android:orientation="vertical"
-    android:gravity="center|top"
-    android:background="@drawable/gradient_white" >
+    android:gravity="center|top" >
 
     <ScrollView
         android:layout_width="match_parent"

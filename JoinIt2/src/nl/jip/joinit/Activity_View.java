@@ -21,7 +21,6 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -66,7 +65,7 @@ public class Activity_View extends Activity {
 		
 		protected Void doInBackground(String... params)
 		{
-			String url = "http://10.0.1.21:8888/app/activity.php";
+			String url = "http://145.24.243.123:8888/app/activity.php";
 			
 			HttpClient httpClient = new DefaultHttpClient();
 			HttpPost httpPost = new HttpPost(url);
@@ -129,20 +128,16 @@ public class Activity_View extends Activity {
 					db_detail.setWidth(lp.MATCH_PARENT);
 					db_detail.setGravity(Gravity.CENTER);
 					db_detail.setTypeface(null, Typeface.BOLD);
-					db_detail.setTextColor(Color.BLACK);
 					db_detail.setText(Jasonobject.getString("Titel") + "\n");
 					ll.addView(db_detail);
 					db_detail1.setText("Omschrijving: \n"+Jasonobject.getString("Omschrijving")+ "\n\n");
 					db_detail1.setWidth(lp.MATCH_PARENT);
 					db_detail1.setGravity(Gravity.CENTER);
-					db_detail1.setTextColor(Color.BLACK);
 					ll.addView(db_detail1);
 					db_detail2.setText("Postcode: \n"+Jasonobject.getString("Postcode")+ "\n\n");
 					db_detail2.setWidth(lp.MATCH_PARENT);
 					db_detail2.setGravity(Gravity.CENTER);
-					db_detail2.setTextColor(Color.BLACK);
 					ll.addView(db_detail2);
-					db_detail3.setTextColor(Color.BLACK);
 					db_detail3.setText("Huisnummer: \n"+Jasonobject.getString("Huisnummer")+ "\n\n");
 					db_detail3.setWidth(lp.MATCH_PARENT);
 					db_detail3.setGravity(Gravity.CENTER);
@@ -150,12 +145,10 @@ public class Activity_View extends Activity {
 					db_detail4.setText("Plaats: \n"+Jasonobject.getString("Plaats")+ "\n\n");
 					db_detail4.setWidth(lp.MATCH_PARENT);
 					db_detail4.setGravity(Gravity.CENTER);
-					db_detail4.setTextColor(Color.BLACK);
 					ll.addView(db_detail4);
 					db_detail5.setText("Datum: \n"+Jasonobject.getString("Datum")+ "\n\n");
 					db_detail5.setWidth(lp.MATCH_PARENT);
 					db_detail5.setGravity(Gravity.CENTER);
-					db_detail5.setTextColor(Color.BLACK);
 					ll.addView(db_detail5);
 					nieuws.addView(ll);
 				}

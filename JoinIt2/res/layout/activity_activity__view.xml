@@ -4,15 +4,13 @@
     android:layout_height="match_parent"
     tools:context="${packageName}.${activityClass}"
     android:gravity="center|top"
-    android:orientation="vertical"
-    android:background="@drawable/gradient_white" >
+    android:orientation="vertical" >
 
     <TextView 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tv_nieuwsoverzicht"
         android:text="@string/tv_nieuwsoverzicht"
-        android:textColor="#000"
         android:gravity="center"
         android:textSize="35sp"
         android:layout_marginBottom="10sp"
@@ -20,7 +18,7 @@
     <View
     android:layout_width="fill_parent"
     android:layout_height="1dp"
-    android:background="@android:color/black"
+    android:background="@android:color/darker_gray"
     android:layout_marginBottom="10sp"
     />
     <ScrollView

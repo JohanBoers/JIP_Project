@@ -23,7 +23,6 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -84,16 +83,13 @@ public class Nieuwsoverzicht extends Activity implements OnClickListener {
 		
 		protected Void doInBackground(String... params)
 		{
-			String url = "http://10.0.1.21:8888/app/activitys.php";
+			String url = "http://145.24.243.123:8888/app/activitys.php";
 			
 			HttpClient httpClient = new DefaultHttpClient();
 			HttpPost httpPost = new HttpPost(url);
-			
-			Bundle extras = getIntent().getExtras();
-			String newString = extras.getString("UserId");
 				
 				ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
-				nameValuePairs.add(new BasicNameValuePair("UserId", newString));
+				nameValuePairs.add(new BasicNameValuePair("Titel", ""));
 			InputStream is = null;
 			try
 			{
@@ -141,12 +137,10 @@ public class Nieuwsoverzicht extends Activity implements OnClickListener {
 					TextView db_detail1 = new TextView(Nieuwsoverzicht.this);
 					LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 					db_detail.setTextSize(25);
-					db_detail.setTextColor(Color.BLACK);
 					db_detail.setTypeface(null, Typeface.BOLD);
 					db_detail.setText(Jasonobject.getString("Titel"));
 					ll.addView(db_detail);
 					db_detail1.setText(Jasonobject.getString("Omschrijving")+ "\n\n");
-					db_detail1.setTextColor(Color.BLACK);
 					ll.addView(db_detail1);
 					nieuws.addView(ll);
 				}

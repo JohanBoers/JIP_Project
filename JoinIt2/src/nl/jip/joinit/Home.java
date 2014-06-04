@@ -28,16 +28,10 @@ public class Home extends Activity implements OnClickListener {
 		{
 			case R.id.btn_add_activity_home:
 				intent = new Intent(this, AddActivity.class);
-				Bundle extras = getIntent().getExtras();
-				String UserId = extras.getString("UserId");
-				intent.putExtra("UserId", UserId);
 				startActivity(intent);
 			break;
 			case R.id.btn_nieuws:
 				intent = new Intent(this, Nieuwsoverzicht.class);
-				Bundle extras2 = getIntent().getExtras();
-				String UserId2 = extras2.getString("UserId");
-				intent.putExtra("UserId", UserId2);
 				startActivity(intent);
 			break;
 			default:
